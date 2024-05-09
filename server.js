@@ -1,39 +1,28 @@
 const express = require('express');
 const app = express();
 
-// Data menu makanan dan minuman
-const menu = [
+// Data mahasiswa
+const mahasiswa = [
     {
-        nama: "Nasi Goreng",
-        jenis: "Makanan",
-        harga: 25000
+        nim: "123456789",
+        fakultas: "Teknik",
+        jurusan: "Informatika"
     },
     {
-        nama: "Ayam Goreng",
-        jenis: "Makanan",
-        harga: 30000
+        nim: "987654321",
+        fakultas: "Ilmu Sosial dan Politik",
+        jurusan: "Ilmu Komunikasi"
     },
     {
-        nama: "Soto Ayam",
-        jenis: "Makanan",
-        harga: 28000
-    },
-    {
-        nama: "Es Teh Manis",
-        jenis: "Minuman",
-        harga: 8000
-    },
-    {
-        nama: "Jus Alpukat",
-        jenis: "Minuman",
-        harga: 12000
+        nim: "246810123",
+        fakultas: "Ekonomi dan Bisnis",
+        jurusan: "Manajemen"
     }
 ];
 
-
 // Endpoint untuk mengembalikan menu
 app.get('/', (req, res) => {
-    res.json(menu);
+    res.json(mahasiswa);
 });
 
 // Port yang digunakan oleh server
